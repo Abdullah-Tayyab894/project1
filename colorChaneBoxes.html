@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        div{
+            width: 200px;
+            height: 200px;
+            border:1px solid red;
+        }
+
+        .box{
+            width:200px;
+            height: 200px;
+            border: 1px solid red;
+            display: inline-block;
+        }
+        #inputValue{
+            display: block;
+            height: 25px;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>
+        Change the color of boxes with "onmouseover" event and "onmouseout" event
+    </h1>
+    <input id="inputValue" type="text" oninput="tryCode(this)">
+
+    <div  onmouseout="normalizeColor(this)" onmouseover="changeColor('red', this)" class="box"></div>
+    <div  onmouseout="normalizeColor(this)" onmouseover="changeColor('blue', this)" class="box"></div>
+
+    <h2>Input box wali Value nechy show ho gi...</h2>
+    <h3 id="enteredValue"></h3>
+
+    <script>
+
+        function tryCode(tagRepresent){
+            enteredValue.innerText = tagRepresent.value;
+        }
+
+        function normalizeColor(tag){
+            tag.style.backgroundColor = "transparent";
+
+        }
+
+        function changeColor(color, tag){
+            tag.style.backgroundColor = color;
+            
+        }
+
+    </script>
+    
+</body>
+</html>
